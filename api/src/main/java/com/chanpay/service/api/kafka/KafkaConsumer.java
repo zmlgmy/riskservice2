@@ -1,5 +1,6 @@
 package com.chanpay.service.api.kafka;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -13,10 +14,9 @@ import java.util.Optional;
  * @Description:
  */
 @Component
+@Slf4j
 public class KafkaConsumer {
-    private final org.slf4j.Logger log = LoggerFactory.getLogger(getClass());
-
-    @KafkaListener(topics = {"zhisheng"})
+    @KafkaListener(topics = {"forseti_api_elasticsearch_message"})
     public void listen(ConsumerRecord<?, ?> record) {
         Optional<?> kafkaMessage = Optional.ofNullable(record.value());
         if (kafkaMessage.isPresent()) {
