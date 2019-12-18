@@ -1,7 +1,5 @@
 package com.chanpay.service.api.service;
 
-import com.chanpay.service.api.entity.TestBean;
-
 import java.util.List;
 
 /**

@@ -6,8 +6,6 @@ package com.chanpay.service.api.service.impl;
  * @Description:
  */
 
-import com.chanpay.service.api.dao.TestDao;
-import com.chanpay.service.api.entity.TestBean;
 import com.chanpay.service.api.service.TestService;
 
 import org.springframework.beans.factory.annotation.Autowired;
