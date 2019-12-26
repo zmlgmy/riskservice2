@@ -182,7 +182,7 @@ public class EsDemoApplicationTests {
     @Test
     public void testFuzzyQuery(){
         NativeSearchQueryBuilder builder = new NativeSearchQueryBuilder();
-        builder.withQuery(QueryBuilders.fuzzyQuery("title","V10"));
+        builder.withQuery(QueryBuilders.fuzzyQuery("title","荣耀"));
         Page<Item> page = this.itemRepository.search(builder.build());
         for(Item item:page){
             System.out.println(item);

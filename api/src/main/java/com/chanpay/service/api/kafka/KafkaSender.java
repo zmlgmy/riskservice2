@@ -24,6 +24,8 @@ public class KafkaSender {
     //发送消息方法
     public void send(Map<String, Object> map) {
         kafkaTemplate.send("forseti_api_elasticsearch_message",gson.toJson(map));
+        kafkaTemplate.send("forseti_api_memcached_message",gson.toJson(map));
+        kafkaTemplate.send("forseti_api_cassandra_message",gson.toJson(map));
     }
 
 }

@@ -25,7 +25,7 @@ public class Item implements Serializable {
     @Id
     private Long id;
 
-    @Field(type = FieldType.Text, analyzer = "ik_max_word")
+    @Field(type = FieldType.Text, analyzer = "ik_max_word",fielddata = true)
     private String title; //标题
 
     @Field(type = FieldType.Keyword)

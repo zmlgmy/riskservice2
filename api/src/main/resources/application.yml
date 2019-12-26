@@ -15,9 +15,27 @@ spring:
             key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
             value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     data:
+        cassandra:
+            keyspace-name: test
+            #entity-base-packages:
+            contact-points: 10.255.1.115
+            port: 9042
+            cluster-name: Test Cluster
         elasticsearch:
             cluster-name: my-application
             cluster-nodes: 10.255.1.115:9300
+
+    kafkaListenerList: forseti_api_elasticsearch_message,forseti_api_elasticsearch_message2
+
+# memcached配置
+memcached:
+    server: 10.255.1.115:11211 #memcached服务器集群(格式为host:port，多个服务器之间用空格隔开)
+    opTimeout: 3000 #接口操作的默认超时时间，可以被接口覆盖
+    poolSize: 10 #池子大小
+    failureMode: false #是否开启失败模式，默认为false
+    enabled: true # 是否使用memcached缓存
+
+
 
 
 
