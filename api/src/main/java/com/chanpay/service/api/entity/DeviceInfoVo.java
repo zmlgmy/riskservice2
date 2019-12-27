@@ -1,8 +1,6 @@
 package com.chanpay.service.api.entity;
 
 import java.io.Serializable;
-import java.util.Date;
-
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
@@ -12,13 +10,13 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class DeviceInfoVo implements Serializable{
    private static final long serialVersionUID = 3531754743416202852L;
   
-            /**
+   /**
      * 存储主键
      */
-            @PrimaryKey
+    @PrimaryKey
     private Long id;
   
-            @Column(value = "deviceId")
+    @Column(value = "deviceId")
     private Long deviceId;
     @Column(value = "property")
     private String property;
@@ -27,58 +25,58 @@ public class DeviceInfoVo implements Serializable{
     private String value;
  
 
-            /**
+    /**
      * @return the id
      */
-            public Long getId() {
+    public Long getId() {
       return id;
     }
  
     /**
      * @param id the id to set
      */
-            public void setId(Long id) {
+    public void setId(Long id) {
       this.id = id;
     }
  
     /**
      * @return the deviceId
      */
-            public Long getDeviceId() {
+    public Long getDeviceId() {
       return deviceId;
     }
  
     /**
      * @param deviceId the deviceId to set
      */
-            public void setDeviceId(Long deviceId) {
+    public void setDeviceId(Long deviceId) {
       this.deviceId = deviceId;
     }
     /**
      * @return the property
      */
-            public String getProperty() {
+    public String getProperty() {
       return property;
     }
  
     /**
      * @param property the property to set
      */
-            public void setProperty(String property) {
+    public void setProperty(String property) {
       this.property = property;
     }
  
     /**
      * @return the value
      */
-            public String getValue() {
+    public String getValue() {
       return value;
     }
  
     /**
      * @param value the value to set
      */
-            public void setValue(String value) {
+    public void setValue(String value) {
       this.value = value;
     }
 

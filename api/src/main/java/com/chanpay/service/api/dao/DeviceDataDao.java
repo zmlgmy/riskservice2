@@ -14,15 +14,15 @@ public class DeviceDataDao{
   @Autowired
   private CassandraTemplate cassandraTemplate;
  
-          public DeviceInfoVo save(DeviceInfoVo entity) {
+  public DeviceInfoVo save(DeviceInfoVo entity) {
     return cassandraTemplate.insert(entity);
   }
  
-          public DeviceInfoVo findOne(Long id) {
+  public DeviceInfoVo findOne(Long id) {
     return cassandraTemplate.selectOneById(id, DeviceInfoVo.class);
   }
  
-          public Iterable<DeviceInfoVo> findAll() {
+  public Iterable<DeviceInfoVo> findAll() {
     return cassandraTemplate.select("SELECT * FROM device_info ;", DeviceInfoVo.class);
   }
  
